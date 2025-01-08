@@ -14,13 +14,9 @@ public:
 
         for (int i = 1; i < nums.size(); i++) {
             if (nums[i] != nums[i - 1]) {
-                nums[k] = nums[i];
+                nums[k] = nums[i]; // this is where magic happens
                 k++;
             }
-        }
-
-        for (const auto num : nums) {
-            cout << num << ' ';
         }
 
         return k;
