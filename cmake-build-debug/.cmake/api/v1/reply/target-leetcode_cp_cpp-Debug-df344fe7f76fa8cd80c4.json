@@ -90,7 +90,8 @@
 			"sourceIndexes" : 
 			[
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -110,6 +111,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "problems/9999/Sol9999.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "neetcode leetcode/26/Sol26.h",
 			"sourceGroupIndex" : 1
 		}
 	],
