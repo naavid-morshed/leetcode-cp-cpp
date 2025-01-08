@@ -6,28 +6,22 @@
 #define SOL26_H
 #include <vector>
 using namespace std;
-#include <bits/stdc++.h>
 
 class Sol26 {
 public:
     static int removeDuplicates(vector<int> &nums) {
-        const vector<int> temp = nums;
-        nums.clear();
-
         int k = 1;
 
-        nums.push_back(temp[0]);
-        for (int i = 1; i < temp.size(); i++) {
-            if (temp[i] != temp[i - 1]) {
-                nums.push_back(temp[i]);
+        for (int i = 1; i < nums.size(); i++) {
+            if (nums[i] != nums[i - 1]) {
+                nums[k] = nums[i];
                 k++;
             }
         }
 
-        for (const int i: nums) {
-            cout << i << " ";
+        for (const auto num : nums) {
+            cout << num << ' ';
         }
-        cout << endl;
 
         return k;
     }
