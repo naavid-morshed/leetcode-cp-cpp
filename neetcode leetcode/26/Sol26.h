@@ -19,11 +19,6 @@ public:
             }
         }
 
-        for (const auto &i : nums) {
-            cout << i << " ";
-        }
-        cout << endl;
-
         return k;
     }
 };
