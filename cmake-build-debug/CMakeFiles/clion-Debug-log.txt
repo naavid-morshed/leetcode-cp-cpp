@@ -1,4 +1,13 @@
 /home/naavidmorshed/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/naavidmorshed/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja -G Ninja -S /home/naavidmorshed/CLionProjects/leetcode-cp-cpp -B /home/naavidmorshed/CLionProjects/leetcode-cp-cpp/cmake-build-debug
 -- Configuring done (0.0s)
--- Generating done (0.0s)
--- Build files have been written to: /home/naavidmorshed/CLionProjects/leetcode-cp-cpp/cmake-build-debug
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    neetcode/designing dynamic array/SolDynamicArray.cpp
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: leetcode_cp_cpp
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

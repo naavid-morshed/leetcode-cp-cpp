@@ -18,6 +18,11 @@ public:
                 nums[k] = nums[i];
                 k++;
             }
+
+            for (const auto &c : nums) {
+                cout << c << " ";
+            }
+            cout << endl;
         }
 
         return k;
