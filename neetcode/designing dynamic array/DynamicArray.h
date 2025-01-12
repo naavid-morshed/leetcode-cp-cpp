@@ -5,9 +5,9 @@
 #ifndef SOLDYNAMICARRAY_H
 #define SOLDYNAMICARRAY_H
 
-class SolDynamicArray {
+class DynamicArray {
 public:
-    SolDynamicArray(int capacity) {
+    DynamicArray(int capacity) {
     }
 
     int get(int i) {

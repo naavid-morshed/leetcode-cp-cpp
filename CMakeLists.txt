@@ -10,5 +10,5 @@ add_executable(leetcode_cp_cpp main.cpp
         "neetcode leetcode/27/Sol27.h"
         "neetcode leetcode/27/Sol27Alt.h"
         "neetcode/designing dynamic array/SolDynamicArray.cpp"
-        "neetcode/designing dynamic array/SolDynamicArray.h"
-        "neetcode/designing dynamic array/SolDynamicArray.h")
+        "neetcode/designing dynamic array/DynamicArray.h"
+        "neetcode/designing dynamic array/DynamicArray.h")
