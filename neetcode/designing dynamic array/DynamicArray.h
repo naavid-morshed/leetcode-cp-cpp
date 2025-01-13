@@ -20,10 +20,6 @@ public:
     }
 
     void set(int i, int n) {
-        if (numArr[getCapacity() - 1] != 0) {
-            resize();
-        }
-
         numArr[i] = n;
     }
 

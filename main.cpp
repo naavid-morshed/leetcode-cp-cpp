@@ -17,19 +17,12 @@ int main() {
     // vector b = {0, 1, 2, 2, 3, 0, 4, 2};
     // cout << Sol27Alt::removeElement(b, 2) << endl;
 
-    // // Dynamic Array
-    // DynamicArray d = DynamicArray(5);
-    // cout << d.getCapacity() << endl;
-    // cout << d.getSize() << endl;
-    //
-    // for (int i = 0; i < 10; i++) {
-    //     d.set(i, i + 1);
-    // }
-    //
-    // d.printValues();
-    // cout << d.popback() << endl;
-    // d.printValues();
-    // cout << d.getSize() << endl;
-
-
+    // Dynamic Array
+    DynamicArray d = DynamicArray(1);
+    d.pushback(5);
+    cout << d.getCapacity() << endl;
+    d.printValues();
+    d.pushback(9);
+    cout << d.getCapacity() << endl;
+    d.printValues();
 }
