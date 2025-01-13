@@ -26,12 +26,13 @@ int main() {
     // cout << d.getCapacity() << endl;
     // d.printValues();
 
-    vector v = {1,2,1};
-    auto s = Sol1929();
-    v = s.getConcatenation(v);
+    // vector v = ;
+    // vector v = Sol1929().getConcatenation({1,2,1});
+    //
+    // for (const auto i : v) {
+    //     cout << i;
+    // }
+    // cout << endl;
 
-    for (auto i : v) {
-        cout << i;
-    }
-    cout << endl;
+
 }
