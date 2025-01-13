@@ -61,7 +61,6 @@ public:
             if (numArr[i] == 0) {
                 break;
             }
-
             size++;
         }
 
