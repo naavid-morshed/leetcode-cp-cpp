@@ -5,6 +5,8 @@
 #include "neetcode leetcode/1929/Sol1929.h"
 #include "leetcode/2914/Sol2914.h"
 #include "neetcode/designing dynamic array/DynamicArray.h"
+#include "neetcode/Valid Parentheses/ValidParentheses.h"
+
 using namespace std;
 #include <vector>
 
@@ -34,5 +36,5 @@ int main() {
     // }
     // cout << endl;
 
-
+    cout << ValidParentheses().isValid("{[({})]}") << endl;
 }
