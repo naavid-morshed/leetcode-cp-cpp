@@ -14,4 +14,4 @@ add_executable(leetcode_cp_cpp main.cpp
         "neetcode/designing dynamic array/DynamicArray.h"
         "neetcode leetcode/1929/Sol1929.h"
         "neetcode leetcode/1929/Sol1929Alt.h"
-        "neetcode/Valid Parentheses/ValidParentheses.h")
+        "neetcode leetcode/20/Sol20.h")
