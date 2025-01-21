@@ -9,14 +9,14 @@ using namespace std;
 
 class Sol155 {
     stack<int> numStack;
-    int minVal = 0;
+    stack<int> minStack;
 
 public:
     Sol155() = default;
 
     void push(const int val) {
-        if (numStack.empty() || minVal > val) {
-            minVal = val;
+        if (minStack.empty() || val <= minStack.top()) {
+            minStack.push(val);
         }
 
         numStack.push(val);
@@ -24,7 +24,12 @@ public:
 
     void pop() {
         if (!numStack.empty()) {
+            const int poppedVal = numStack.top();
             numStack.pop();
+
+            if (poppedVal == minStack.top()) {
+                minStack.pop();
+            }
         }
     }
 
@@ -33,16 +38,17 @@ public:
     }
 
     int getMin() {
-        return minVal;
+        return minStack.top();
     }
 
     void printAll() {
-        std::stack<int> tempStack = numStack;  // Make a copy of the stack to avoid modifying the original
+        stack<int> tempStack = numStack;
+
         while (!tempStack.empty()) {
-            std::cout << tempStack.top() << " ";
+            cout << tempStack.top() << " ";
             tempStack.pop();
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 };
 
