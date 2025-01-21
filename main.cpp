@@ -4,6 +4,7 @@
 #include "neetcode leetcode/27/Sol27.h"
 #include "neetcode leetcode/1929/Sol1929.h"
 #include "leetcode/2914/Sol2914.h"
+#include "neetcode leetcode/155/Sol155.h"
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
 
@@ -36,5 +37,15 @@ int main() {
     // }
     // cout << endl;
 
-    cout << Sol20Alt().isValid("(){}{}{[()]}{}") << endl;
+    // cout << Sol20Alt().isValid("(){}{}{[()]}{}") << endl;
+
+    auto sl = new Sol155();
+    sl->push(1);
+    cout << sl->getMin() << endl;
+    sl->push(-5);
+    cout << sl->getMin() << endl;
+    sl->pop();
+    cout << sl->getMin() << endl;
+    // cout << sl->top() << endl;
+    // sl->printAll();
 }
