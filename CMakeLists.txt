@@ -9,9 +9,8 @@ add_executable(leetcode_cp_cpp main.cpp
         "neetcode leetcode/26/Sol26.h"
         "neetcode leetcode/27/Sol27.h"
         "neetcode leetcode/27/Sol27Alt.h"
-        "neetcode/designing dynamic array/SolDynamicArray.cpp"
-        "neetcode/designing dynamic array/DynamicArray.h"
         "neetcode/designing dynamic array/DynamicArray.h"
         "neetcode leetcode/1929/Sol1929.h"
         "neetcode leetcode/1929/Sol1929Alt.h"
-        "neetcode leetcode/20/Sol20.h")
+        "neetcode leetcode/20/Sol20.h"
+        "neetcode leetcode/155/Sol155.h")
