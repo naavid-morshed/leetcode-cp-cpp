@@ -5,6 +5,7 @@
 #ifndef SOL20_H
 #define SOL20_H
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Sol20 {

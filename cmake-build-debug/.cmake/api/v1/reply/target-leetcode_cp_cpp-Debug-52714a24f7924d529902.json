@@ -98,7 +98,10 @@
 				7,
 				8,
 				9,
-				10
+				10,
+				11,
+				12,
+				13
 			]
 		}
 	],
@@ -158,6 +161,21 @@
 		{
 			"backtrace" : 1,
 			"path" : "neetcode leetcode/155/Sol155.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "neetcode/Design Singly Linked List/LInkedList.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "neetcode/Design Singly Linked List/ListNode.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "neetcode/Design Singly Linked List/LinkedListAlt.h",
 			"sourceGroupIndex" : 1
 		}
 	],

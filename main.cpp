@@ -7,6 +7,7 @@
 #include "neetcode leetcode/155/Sol155.h"
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
+#include "neetcode/Design Singly Linked List/LInkedList.h"
 
 using namespace std;
 #include <vector>
@@ -39,13 +40,31 @@ int main() {
 
     // cout << Sol20Alt().isValid("(){}{}{[()]}{}") << endl;
 
-    auto sl = new Sol155();
-    sl->push(1);
-    cout << sl->getMin() << endl;
-    sl->push(-5);
-    cout << sl->getMin() << endl;
-    sl->pop();
-    cout << sl->getMin() << endl;
-    // cout << sl->top() << endl;
-    // sl->printAll();
+    // auto sl = new Sol155();
+    // sl->push(1);
+    // cout << sl->getMin() << endl;
+    // sl->push(-5);
+    // cout << sl->getMin() << endl;
+    // sl->pop();
+    // cout << sl->getMin() << endl;
+    // // cout << sl->top() << endl;
+    // // sl->printAll();
+
+    // auto linked_list = LinkedList();
+    // linked_list.insertTail(1);
+    // linked_list.insertTail(2);
+    // linked_list.insertTail(3);
+    // linked_list.insertHead(3);
+    // cout << linked_list.remove(1) << endl;
+    // linked_list.insertHead(55);
+    // linked_list.insertTail(33);
+    // linked_list.remove(2);
+    // const auto vals = linked_list.getValues();
+    //
+    // for (const auto i : vals) {
+    //     cout << i << ", ";
+    // }
+    // cout << endl;
+
+
 }

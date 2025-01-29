@@ -13,4 +13,7 @@ add_executable(leetcode_cp_cpp main.cpp
         "neetcode leetcode/1929/Sol1929.h"
         "neetcode leetcode/1929/Sol1929Alt.h"
         "neetcode leetcode/20/Sol20.h"
-        "neetcode leetcode/155/Sol155.h")
+        "neetcode leetcode/155/Sol155.h"
+        "neetcode/Design Singly Linked List/LInkedList.h"
+        "neetcode/Design Singly Linked List/ListNode.h"
+        "neetcode/Design Singly Linked List/LinkedListAlt.h")
