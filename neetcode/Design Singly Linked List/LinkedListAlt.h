@@ -5,4 +5,13 @@
 #ifndef LINKEDLISTALT_H
 #define LINKEDLISTALT_H
 
+class LinkedListAlt {
+    int number{};
+    LinkedListAlt *nextNode;
+
+public:
+    LinkedListAlt() {
+        nextNode = nullptr;
+    }
+};
 #endif //LINKEDLISTALT_H
