@@ -24,6 +24,9 @@ public:
         if (index == 0) {
             return *this->number;
         }
+        if (index >= this->getValues().size()) {
+            return -1;
+        }
 
         const auto *currentNode = this;
         int currentNodeIndex = 0;

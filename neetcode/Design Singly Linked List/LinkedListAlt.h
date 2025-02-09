@@ -7,12 +7,12 @@
 #include <vector>
 using namespace std;
 
-class LinkedList {
+class LinkedListAlt {
     int *number;
-    LinkedList *next_node;
+    LinkedListAlt *next_node;
 
 public:
-    LinkedList() {
+    LinkedListAlt() {
         number = nullptr;
         next_node = nullptr;
     }
@@ -23,6 +23,9 @@ public:
         }
         if (index == 0) {
             return *this->number;
+        }
+        if (index >= this->getValues().size()) {
+            return -1;
         }
 
         const auto *currentNode = this;
@@ -44,7 +47,7 @@ public:
         if (this->number == nullptr) {
             this->number = new int(val);
         } else {
-            auto *newHead = new LinkedList();
+            auto *newHead = new LinkedListAlt();
             newHead->number = this->number;
             newHead->next_node = this->next_node;
 
@@ -63,7 +66,7 @@ public:
                 currentNode = currentNode->next_node;
             }
 
-            const auto newTail = new LinkedList();
+            const auto newTail = new LinkedListAlt();
             newTail->number = new int(val);
 
             currentNode->next_node = newTail;
