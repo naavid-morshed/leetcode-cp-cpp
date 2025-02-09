@@ -79,6 +79,7 @@ int main() {
     lla->remove(0);
     lla->insertHead(6);
     lla->insertTail(7);
+    lla->remove(2);
     cout << lla->get(4) << endl;
 
     vector<int> nums = lla->getValues();

@@ -84,16 +84,7 @@ public:
             return false;
         }
 
-        int currentIndex = 0;
-        auto currentNode = this;
-
-        while (currentIndex != index - 1) {
-            currentNode = currentNode->next_node;
-            currentIndex++;
-        }
-
-        currentNode->next_node = currentNode->next_node->next_node;
-        return true;
+        return this->removeMiddle(index);
     }
 
     vector<int> getValues() const {
@@ -110,6 +101,7 @@ public:
         return nums;
     }
 
+private:
     bool removeHead() {
         if (this->number == nullptr) {
             return false;
@@ -136,6 +128,19 @@ public:
 
         currentNode->next_node = nullptr;
 
+        return true;
+    }
+
+    bool removeMiddle(const int index) {
+        int currentIndex = 0;
+        auto currentNode = this;
+
+        while (currentIndex != index - 1) {
+            currentNode = currentNode->next_node;
+            currentIndex++;
+        }
+
+        currentNode->next_node = currentNode->next_node->next_node;
         return true;
     }
 };
