@@ -69,12 +69,19 @@ int main() {
 
     auto lla = new LinkedList();
     lla->insertHead(1);
-    lla->insertTail(2);
-    lla->remove(1);
+    lla->insertHead(2);
+    lla->insertTail(3);
+    lla->insertTail(4);
+    lla->insertTail(5);
+    // cout << lla->get(0) << endl;
+    // cout << lla->get(2) << endl;
+    // cout << lla->get(4) << endl;
+    lla->remove(2);
     lla->remove(0);
-    // lla->remove(0);
-    // lla->remove(1);
-    // lla->insertHead(4);
+    lla->insertHead(6);
+    lla->insertTail(7);
+    // cout << lla->get(5) << endl;
+
     vector<int> nums = lla->getValues();
 
     for (const auto num: nums) {

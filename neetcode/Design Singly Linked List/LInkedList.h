@@ -70,30 +70,26 @@ public:
         }
     }
 
-    bool remove(int index) {
+    bool remove(const int index) {
         if (index == 0) {
-            this->removeHead();
-        } else if (this->getValues().size() - 1 == index) {
+            return this->removeHead();
+        }
+        if (this->getValues().size() - 1 == index) {
             return this->removeTail();
-        } else if (index < this->getValues().size() - 1) {
+        }
+        if (index >= this->getValues().size()) {
             return false;
         }
 
-        // int currentIndex = 0;
-        // index--;
-        // auto currentNode = this;
-        //
-        // while (currentIndex != index) {
-        //     currentNode = currentNode->next_node;
-        //     currentIndex++;
-        // }
-        //
-        // if (currentNode->next_node->next_node != nullptr) {
-        //     currentNode->next_node = currentNode->next_node->next_node;
-        // } else {
-        //     currentNode->next_node = nullptr;
-        // }
-        //
+        int currentIndex = 0;
+        auto currentNode = this;
+
+        while (currentIndex != index - 1) {
+            currentNode = currentNode->next_node;
+            currentIndex++;
+        }
+
+        currentNode->next_node = currentNode->next_node->next_node;
         return true;
     }
 
@@ -112,6 +108,9 @@ public:
     }
 
     bool removeHead() {
+        if (this->number == nullptr) {
+            return false;
+        }
         if (this->next_node == nullptr) {
             this->number = nullptr;
         } else {
