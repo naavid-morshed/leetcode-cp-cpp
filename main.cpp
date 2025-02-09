@@ -8,6 +8,7 @@
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
 #include "neetcode/Design Singly Linked List/LInkedList.h"
+#include "neetcode/Design Singly Linked List/LinkedList.h"
 
 using namespace std;
 #include <vector>
@@ -66,5 +67,18 @@ int main() {
     // }
     // cout << endl;
 
+    auto lla = new LinkedList();
+    lla->insertHead(1);
+    lla->insertTail(2);
+    lla->remove(1);
+    lla->remove(0);
+    // lla->remove(0);
+    // lla->remove(1);
+    // lla->insertHead(4);
+    vector<int> nums = lla->getValues();
 
+    for (const auto num: nums) {
+        cout << num << ", ";
+    }
+    cout << endl;
 }
