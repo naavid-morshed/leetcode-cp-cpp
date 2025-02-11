@@ -8,6 +8,8 @@
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
 #include "neetcode/Design Singly Linked List/LinkedListAlt.h"
+#include "neetcode/Reverse Linked List/LNode.h"
+#include "neetcode/Reverse Linked List/solution.h"
 
 using namespace std;
 #include <vector>
@@ -66,26 +68,48 @@ int main() {
     // }
     // cout << endl;
 
-    auto lla = new LinkedListAlt();
-    lla->insertHead(1);
-    lla->insertHead(2);
-    lla->insertTail(3);
-    lla->insertTail(4);
-    lla->insertTail(5);
-    // cout << lla->get(0) << endl;
-    // cout << lla->get(2) << endl;
+    // auto lla = new LinkedListAlt();
+    // lla->insertHead(1);
+    // lla->insertHead(2);
+    // lla->insertTail(3);
+    // lla->insertTail(4);
+    // lla->insertTail(5);
+    // // cout << lla->get(0) << endl;
+    // // cout << lla->get(2) << endl;
+    // // cout << lla->get(4) << endl;
+    // lla->remove(2);
+    // lla->remove(0);
+    // lla->insertHead(6);
+    // lla->insertTail(7);
+    // lla->remove(2);
     // cout << lla->get(4) << endl;
-    lla->remove(2);
-    lla->remove(0);
-    lla->insertHead(6);
-    lla->insertTail(7);
-    lla->remove(2);
-    cout << lla->get(4) << endl;
+    //
+    // vector<int> nums = lla->getValues();
+    //
+    // for (const auto num: nums) {
+    //     cout << num << ", ";
+    // }
+    // cout << endl;
 
-    vector<int> nums = lla->getValues();
+    auto tail3 = new LNode(3);
+    auto tail2 = new LNode(2, tail3);
+    auto head = new LNode(1, tail2);
 
-    for (const auto num: nums) {
-        cout << num << ", ";
+    auto currentNode = head;
+
+    while (currentNode != nullptr) {
+        cout << currentNode->val << ", ";
+        currentNode = currentNode->next;
+    }
+    cout << endl;
+
+    head = Solution::reverseList(head);
+
+    currentNode = head;
+
+    while (currentNode != nullptr) {
+        cout << currentNode->val << ", ";
+        currentNode = currentNode->next;
     }
     cout << endl;
 }
