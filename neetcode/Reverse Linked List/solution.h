@@ -5,8 +5,6 @@ using namespace std;
 
 #include <algorithm>
 #include "LNode.h"
-#include <vector>
-#include <iostream>
 
 class Solution {
 public:

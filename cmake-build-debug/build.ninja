@@ -55,12 +55,6 @@ build CMakeFiles/leetcode_cp_cpp.dir/main.cpp.o: CXX_COMPILER__leetcode_cp_cpp_u
   OBJECT_DIR = CMakeFiles/leetcode_cp_cpp.dir
   OBJECT_FILE_DIR = CMakeFiles/leetcode_cp_cpp.dir
 
-build CMakeFiles/leetcode_cp_cpp.dir/neetcode/Reverse_Linked_List/solution.cpp.o: CXX_COMPILER__leetcode_cp_cpp_unscanned_Debug /home/naavidmorshed/CLionProjects/leetcode-cp-cpp/neetcode/Reverse$ Linked$ List/solution.cpp || cmake_object_order_depends_target_leetcode_cp_cpp
-  DEP_FILE = CMakeFiles/leetcode_cp_cpp.dir/neetcode/Reverse_Linked_List/solution.cpp.o.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/leetcode_cp_cpp.dir
-  OBJECT_FILE_DIR = CMakeFiles/leetcode_cp_cpp.dir/neetcode/Reverse_Linked_List
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target leetcode_cp_cpp
@@ -69,7 +63,7 @@ build CMakeFiles/leetcode_cp_cpp.dir/neetcode/Reverse_Linked_List/solution.cpp.o
 #############################################
 # Link the executable leetcode_cp_cpp
 
-build leetcode_cp_cpp: CXX_EXECUTABLE_LINKER__leetcode_cp_cpp_Debug CMakeFiles/leetcode_cp_cpp.dir/main.cpp.o CMakeFiles/leetcode_cp_cpp.dir/neetcode/Reverse_Linked_List/solution.cpp.o
+build leetcode_cp_cpp: CXX_EXECUTABLE_LINKER__leetcode_cp_cpp_Debug CMakeFiles/leetcode_cp_cpp.dir/main.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/leetcode_cp_cpp.dir
   POST_BUILD = :
