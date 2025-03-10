@@ -115,19 +115,20 @@ int main() {
     // }
     // cout << endl;
 
-    auto g = new ListNode(4);
-    auto f = new ListNode(2, g);
-    auto e = new ListNode(1, f);
-
-    auto d = new ListNode(5);
-    auto c = new ListNode(3, d);
-    auto a = new ListNode(1, c);
-
-    auto result = MergeTwoLists::mergeTwoLists(e, a);
-
-    while (result != nullptr) {
-        cout << result->number << ", ";
-        result = result->nextNode;
-    }
-    cout << endl;
+    //// merge two sorted linked list
+    // auto g = new ListNode(4);
+    // auto f = new ListNode(2, g);
+    // auto e = new ListNode(1, f);
+    //
+    // auto d = new ListNode(5);
+    // auto c = new ListNode(3, d);
+    // auto a = new ListNode(1, c);
+    //
+    // auto result = MergeTwoLists::mergeTwoLists(e, a);
+    //
+    // while (result != nullptr) {
+    //     cout << result->number << ", ";
+    //     result = result->nextNode;
+    // }
+    // cout << endl;
 }

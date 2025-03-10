@@ -7,13 +7,13 @@
 
 class ListNode {
 public:
-    int number;
-    ListNode *nextNode;
+    int val;
+    ListNode *next;
 
-    explicit ListNode(const int number) : number(number), nextNode(nullptr) {
+    explicit ListNode(const int number) : val(number), next(nullptr) {
     }
 
-    explicit ListNode(const int number, ListNode *nextNode) : number(number), nextNode(nextNode) {
+    explicit ListNode(const int number, ListNode *nextNode) : val(number), next(nextNode) {
     }
 };
 #endif //LISTNODE_H

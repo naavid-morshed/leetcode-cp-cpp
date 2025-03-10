@@ -9,29 +9,29 @@
 
 class MergeTwoLists {
 public:
-    static ListNode *mergeTwoLists(ListNode *list1, ListNode *list2) {
-        auto dummyNode = new ListNode(0);  // Dummy node to start the list
-        ListNode *current = dummyNode;      // Pointer to the current node in the merged list
+    ListNode *mergeTwoLists(ListNode *list1, ListNode *list2) {
+        const auto dummyNode = new ListNode(0); // Dummy node to start the list
+        ListNode *current = dummyNode; // Pointer to the current node in the merged list
 
         while (list1 && list2) {
-            if (list1->number <= list2->number) {
-                current->nextNode = list1;  // Attach the smaller node
-                list1 = list1->nextNode;
+            if (list1->val <= list2->val) {
+                current->next = list1; // Attach the smaller node
+                list1 = list1->next;
             } else {
-                current->nextNode = list2;  // Attach the smaller node
-                list2 = list2->nextNode;
+                current->next = list2; // Attach the smaller node
+                list2 = list2->next;
             }
-            current = current->nextNode;  // Move current pointer forward
+            current = current->next; // Move current pointer forward
         }
 
         // At this point, at least one of list1 or list2 is null
         if (list1) {
-            current->nextNode = list1;
+            current->next = list1;
         } else {
-            current->nextNode = list2;
+            current->next = list2;
         }
 
-        return dummyNode->nextNode;
+        return dummyNode->next;
     }
 };
 #endif //MERGETWOLISTS_H
