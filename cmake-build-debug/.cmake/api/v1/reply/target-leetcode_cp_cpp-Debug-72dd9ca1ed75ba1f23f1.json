@@ -193,7 +193,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Algorithm/MergeSort.h",
+			"path" : "neetcode/merge two sorted linked list/MergeTwoLists.h",
 			"sourceGroupIndex" : 1
 		}
 	],

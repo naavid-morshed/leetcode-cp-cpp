@@ -12,5 +12,8 @@ public:
 
     explicit ListNode(const int number) : number(number), nextNode(nullptr) {
     }
+
+    explicit ListNode(const int number, ListNode *nextNode) : number(number), nextNode(nextNode) {
+    }
 };
 #endif //LISTNODE_H

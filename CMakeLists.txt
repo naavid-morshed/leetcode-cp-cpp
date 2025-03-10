@@ -19,4 +19,4 @@ add_executable(leetcode_cp_cpp main.cpp
         "neetcode/Design Singly Linked List/LinkedListAlt.h"
         "neetcode/Reverse Linked List/solution.h"
         "neetcode/Reverse Linked List/LNode.h"
-        Algorithm/MergeSort.h)
+        "neetcode/merge two sorted linked list/MergeTwoLists.h")

@@ -8,6 +8,8 @@
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
 #include "neetcode/Design Singly Linked List/LinkedListAlt.h"
+#include "neetcode/Design Singly Linked List/ListNode.h"
+#include "neetcode/merge two sorted linked list/MergeTwoLists.h"
 #include "neetcode/Reverse Linked List/LNode.h"
 #include "neetcode/Reverse Linked List/solution.h"
 
@@ -80,7 +82,7 @@ int main() {
     // lla->remove(2);
     // lla->remove(0);
     // lla->insertHead(6);
-        // lla->insertTail(7);
+    // lla->insertTail(7);
     // lla->remove(2);
     // cout << lla->get(4) << endl;
     //
@@ -91,25 +93,41 @@ int main() {
     // }
     // cout << endl;
 
-    auto tail3 = new LNode(3);
-    auto tail2 = new LNode(2, tail3);
-    auto head = new LNode(1, tail2);
+    // auto tail3 = new LNode(3);
+    // auto tail2 = new LNode(2, tail3);
+    // auto head = new LNode(1, tail2);
+    //
+    // auto currentNode = head;
+    //
+    // while (currentNode != nullptr) {
+    //     cout << currentNode->val << ", ";
+    //     currentNode = currentNode->next;
+    // }
+    // cout << endl;
+    //
+    // head = Solution::reverseList(head);
+    //
+    // currentNode = head;
+    //
+    // while (currentNode != nullptr) {
+    //     cout << currentNode->val << ", ";
+    //     currentNode = currentNode->next;
+    // }
+    // cout << endl;
 
-    auto currentNode = head;
+    auto g = new ListNode(4);
+    auto f = new ListNode(2, g);
+    auto e = new ListNode(1, f);
 
-    while (currentNode != nullptr) {
-        cout << currentNode->val << ", ";
-        currentNode = currentNode->next;
-    }
-    cout << endl;
+    auto d = new ListNode(5);
+    auto c = new ListNode(3, d);
+    auto a = new ListNode(1, c);
 
-    head = Solution::reverseList(head);
+    auto result = MergeTwoLists::mergeTwoLists(e, a);
 
-    currentNode = head;
-
-    while (currentNode != nullptr) {
-        cout << currentNode->val << ", ";
-        currentNode = currentNode->next;
+    while (result != nullptr) {
+        cout << result->number << ", ";
+        result = result->nextNode;
     }
     cout << endl;
 }
