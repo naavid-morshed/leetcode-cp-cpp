@@ -7,6 +7,7 @@
 #include "neetcode leetcode/155/Sol155.h"
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
+#include "neetcode leetcode/707 Design Linked List/MyLinkedList.h"
 #include "neetcode/Design Singly Linked List/LinkedListAlt.h"
 #include "neetcode/Design Singly Linked List/ListNode.h"
 #include "neetcode/merge two sorted linked list/MergeTwoLists.h"
@@ -131,4 +132,47 @@ int main() {
     //     result = result->nextNode;
     // }
     // cout << endl;
+
+
+    // auto list = new MyLinkedList();
+    // list->addAtHead(1);
+    // list->addAtTail(3);
+    // list->addAtTail(4);
+    // list->addAtTail(5);
+    // list->addAtIndex(1, 2);
+    // cout << list->get(1) << endl;
+    // list->deleteAtIndex(1);
+    // cout << list->get(1) << endl;
+    // cout << list->get(0) << endl;
+    //
+    // auto currentNode = list;
+    //
+    // while (currentNode != nullptr) {
+    //     cout << *currentNode->val << (currentNode->next != nullptr ? ", " : ".");
+    //     currentNode = currentNode->next;
+    // }
+    // cout << endl;
+
+    auto list = new MyLinkedList();
+
+    list->addAtHead(38);
+    list->addAtTail(66);
+    list->addAtTail(61);
+    list->addAtTail(76);
+    list->addAtTail(26);
+    list->addAtTail(37);
+    list->addAtTail(8);
+
+    list->deleteAtIndex(5);
+
+    list->addAtHead(4);
+    list->addAtHead(45);
+
+    auto currentNode = list;
+
+    while (currentNode != nullptr) {
+        cout << *currentNode->val << (currentNode->next != nullptr ? ", " : ".");
+        currentNode = currentNode->next;
+    }
+    cout << endl;
 }
