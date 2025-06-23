@@ -153,26 +153,21 @@ int main() {
     // }
     // cout << endl;
 
-    auto list = new MyLinkedList();
 
-    list->addAtHead(38);
-    list->addAtTail(66);
-    list->addAtTail(61);
-    list->addAtTail(76);
-    list->addAtTail(26);
-    list->addAtTail(37);
-    list->addAtTail(8);
+    auto val = new MyLinkedList();
+    val->addAtHead(5);
+    val->addAtHead(6);
+    val->addAtTail(9);
+    val->addAtTail(1);
+    val->addAtTail(11);
 
-    list->deleteAtIndex(5);
+    val->addAtIndex(5,12);
 
-    list->addAtHead(4);
-    list->addAtHead(45);
+    cout << val->get(4) << "\n";
+    auto dd = val;
 
-    auto currentNode = list;
-
-    while (currentNode != nullptr) {
-        cout << *currentNode->val << (currentNode->next != nullptr ? ", " : ".");
-        currentNode = currentNode->next;
+    while (dd != nullptr) {
+        cout << *dd->val << ", ";
+        dd = dd->next;
     }
-    cout << endl;
 }
