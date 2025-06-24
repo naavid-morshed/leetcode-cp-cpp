@@ -4,6 +4,7 @@
 #include "neetcode leetcode/27/Sol27.h"
 #include "neetcode leetcode/1929/Sol1929.h"
 #include "leetcode/2914/Sol2914.h"
+#include "neetcode leetcode/1472/BrowserHistory.h"
 #include "neetcode leetcode/155/Sol155.h"
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
@@ -133,35 +134,17 @@ int main() {
     // }
     // cout << endl;
 
+    auto bh = BrowserHistory("google.com");
+    bh.visit("youtube.come");
+    bh.visit("steam.com");
 
-    // auto list = new MyLinkedList();
-    // list->addAtHead(1);
-    // list->addAtTail(3);
-    // list->addAtTail(4);
-    // list->addAtTail(5);
-    // list->addAtIndex(1, 2);
-    // cout << list->get(1) << endl;
-    // list->deleteAtIndex(1);
-    // cout << list->get(1) << endl;
-    // cout << list->get(0) << endl;
-    //
-    // auto currentNode = list;
-    //
-    // while (currentNode != nullptr) {
-    //     cout << *currentNode->val << (currentNode->next != nullptr ? ", " : ".");
-    //     currentNode = currentNode->next;
-    // }
-    // cout << endl;
+    bh.back(2);
+    bh.forward(1);
 
+    stack<string> urls = bh.history;
 
-    auto val = new MyLinkedList();
-    val->addAtIndex(1,0);
-
-
-    auto dd = val;
-
-    while (dd != nullptr) {
-        cout << *dd->val << ", ";
-        dd = dd->next;
+    while (!urls.empty()) {
+        cout << urls.top() << endl;
+        urls.pop();
     }
 }

@@ -20,4 +20,6 @@ add_executable(leetcode_cp_cpp main.cpp
         "neetcode/Reverse Linked List/solution.h"
         "neetcode/Reverse Linked List/LNode.h"
         "neetcode/merge two sorted linked list/MergeTwoLists.h"
-        "neetcode leetcode/707 Design Linked List/MyLinkedList.h")
+        "neetcode leetcode/707 Design Linked List/MyLinkedList.h"
+        "neetcode leetcode/1472/BrowserHistory.h"
+        "neetcode leetcode/1472/BrowserHistoryAlt.h")
