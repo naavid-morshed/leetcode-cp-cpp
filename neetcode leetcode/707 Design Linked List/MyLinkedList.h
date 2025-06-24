@@ -67,6 +67,11 @@ public:
     }
 
     void addAtIndex(int index, int val) {
+        if (this->val != nullptr &&index == getListSize()) {
+        } else if (!isIndexValid(index)) {
+            return;
+        }
+
         if (index == 0) {
             addAtHead(val);
         } else {
@@ -90,8 +95,33 @@ public:
         }
     }
 
+    bool isIndexValid(const int index) const {
+        return index < getListSize();
+    }
+
+    int getListSize() const {
+        auto currentNode = this;
+        int size = 0;
+
+        while (currentNode != nullptr) {
+            ++size;
+            currentNode = currentNode->next;
+        }
+
+        return size;
+    }
+
     void deleteAtIndex(int index) {
+        if (index != 0 && !isIndexValid(index)) {
+            return;
+        }
+
         if (index == 0) {
+            if (this->next == nullptr) {
+                this->val = nullptr;
+                return;
+            }
+
             auto currentNode = this;
 
             while (currentNode->next != nullptr) {

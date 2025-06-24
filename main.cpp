@@ -155,15 +155,9 @@ int main() {
 
 
     auto val = new MyLinkedList();
-    val->addAtHead(5);
-    val->addAtHead(6);
-    val->addAtTail(9);
-    val->addAtTail(1);
-    val->addAtTail(11);
+    val->addAtIndex(1,0);
 
-    val->addAtIndex(5,12);
 
-    cout << val->get(4) << "\n";
     auto dd = val;
 
     while (dd != nullptr) {
