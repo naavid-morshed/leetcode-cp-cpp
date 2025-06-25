@@ -107,7 +107,9 @@
 				16,
 				17,
 				18,
-				19
+				19,
+				20,
+				21
 			]
 		}
 	],
@@ -212,6 +214,16 @@
 		{
 			"backtrace" : 1,
 			"path" : "neetcode leetcode/1472/BrowserHistoryAlt.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "neetcode/Design Double-ended Queue/Deque.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "neetcode/Design Double-ended Queue/DoublyLinkedList.h",
 			"sourceGroupIndex" : 1
 		}
 	],

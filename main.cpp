@@ -9,6 +9,8 @@
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
 #include "neetcode leetcode/707 Design Linked List/MyLinkedList.h"
+#include "neetcode/Design Double-ended Queue/Deque.h"
+#include "neetcode/Design Double-ended Queue/DoublyLinkedList.h"
 #include "neetcode/Design Singly Linked List/LinkedListAlt.h"
 #include "neetcode/Design Singly Linked List/ListNode.h"
 #include "neetcode/merge two sorted linked list/MergeTwoLists.h"
@@ -134,17 +136,50 @@ int main() {
     // }
     // cout << endl;
 
-    auto bh = BrowserHistory("google.com");
-    bh.visit("youtube.come");
-    bh.visit("steam.com");
+    // auto bh = BrowserHistory("google.com");
+    // bh.visit("youtube.come");
+    // bh.visit("steam.com");
+    //
+    // bh.back(2);
+    // bh.forward(1);
+    //
+    // stack<string> urls = bh.history;
+    //
+    // while (!urls.empty()) {
+    //     cout << urls.top() << endl;
+    //     urls.pop();
+    // }
 
-    bh.back(2);
-    bh.forward(1);
+    auto list = new Deque();
+    // list->appendleft(0);
+    // list->appendleft(1);
+    list->append(10);
+    list->append(11);
+    list->append(12);
+    // list->appendleft(50);
+    // list->appendleft(2);
 
-    stack<string> urls = bh.history;
+    // cout << "Popped value: " << list->pop() << endl;
+    // cout << "Popped value: " << list->pop() << endl;
+    // cout << "Popped value: " << list->pop() << endl;
 
-    while (!urls.empty()) {
-        cout << urls.top() << endl;
-        urls.pop();
+
+    auto dd = list->head;
+
+    while (dd != nullptr) {
+        cout << *dd->val << ", ";
+        dd = dd->next;
+    }
+    cout << endl;
+
+    auto tail = list->head;
+
+    while (tail->next != nullptr) {
+        tail = tail->next;
+    }
+
+    while (tail != nullptr) {
+        cout << *tail->val << ", ";
+        tail = tail->prev;
     }
 }
