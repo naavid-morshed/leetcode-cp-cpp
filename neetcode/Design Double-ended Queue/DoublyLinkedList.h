@@ -28,17 +28,14 @@ public:
         if (this->val == nullptr) {
             this->val = new int(val);
         } else {
-            if (this->next == nullptr ) {
-                const auto shiftingHead = new DoublyLinkedList(*this->val, this);
+            const auto shiftingHead = new DoublyLinkedList(*this->val, this, this->next);
 
-                this->val = new int(val);
-                this->next = shiftingHead;
-            } else {
-                const auto shiftingHead = new DoublyLinkedList(*this->val, this, this->next);
-
-                this->val = new int(val);
-                this->next = shiftingHead;
+            if (this->next != nullptr) {
+                this->next->prev = shiftingHead;
             }
+
+            this->val = new int(val);
+            this->next = shiftingHead;
         }
     }
 

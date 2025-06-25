@@ -151,18 +151,24 @@ int main() {
     // }
 
     auto list = new Deque();
-    // list->appendleft(0);
+    list->appendleft(0);
     // list->appendleft(1);
-    list->append(10);
-    list->append(11);
-    list->append(12);
+    // list->append(10);
+    // list->append(11);
+    // list->append(12);
     // list->appendleft(50);
     // list->appendleft(2);
 
+    cout << "Popped Val HEAD: " << list->pop() << endl;
+    //
+    // // cout << "Popped value TAIL: " << list->pop() << endl;
     // cout << "Popped value: " << list->pop() << endl;
-    // cout << "Popped value: " << list->pop() << endl;
+    // // cout << "Popped value: " << list->pop() << endl;
+    // cout << "Popped Val HEAD: " << list->popleft() << endl;
     // cout << "Popped value: " << list->pop() << endl;
 
+    // list->append(55);
+    // list->appendleft(50);
 
     auto dd = list->head;
 
