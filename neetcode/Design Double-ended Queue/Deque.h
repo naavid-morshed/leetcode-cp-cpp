@@ -35,7 +35,7 @@ public:
 
         if (head->next == nullptr) {
             int val = *head->val;
-            head= new DoublyLinkedList();
+            head = new DoublyLinkedList();
 
             return val;
         }

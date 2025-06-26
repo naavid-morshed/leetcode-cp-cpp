@@ -6,6 +6,7 @@
 #include "leetcode/2914/Sol2914.h"
 #include "neetcode leetcode/1472/BrowserHistory.h"
 #include "neetcode leetcode/155/Sol155.h"
+#include "neetcode leetcode/1700/Lunch.h"
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
 #include "neetcode leetcode/707 Design Linked List/MyLinkedList.h"
@@ -150,33 +151,9 @@ int main() {
     //     urls.pop();
     // }
 
-    auto list = new Deque();
-    // cout << (list->isEmpty() ? "Empty" : "Not Empty") << endl;
-    list->appendleft(1);
-    list->appendleft(2);
-    list->pop();
-    list->pop();
+    vector sandwiches = {1, 0, 0, 0, 1, 1};
+    vector students = {1, 1, 1, 0, 0, 1};
 
-    auto dd = list->head;
 
-    while (dd != nullptr) {
-        if (dd->val != nullptr) {
-            cout << *dd->val << ", ";
-        }
-        dd = dd->next;
-    }
-    cout << endl;
-
-    auto tail = list->head;
-
-    while (tail->next != nullptr) {
-        tail = tail->next;
-    }
-
-    while (tail != nullptr) {
-        if (tail->val != nullptr) {
-            cout << *tail->val << ", ";
-        }
-        tail = tail->prev;
-    }
+    cout << Lunch::countStudents(students, sandwiches) << endl;
 }

@@ -24,4 +24,5 @@ add_executable(leetcode_cp_cpp main.cpp
         "neetcode leetcode/1472/BrowserHistory.h"
         "neetcode leetcode/1472/BrowserHistoryAlt.h"
         "neetcode/Design Double-ended Queue/Deque.h"
-        "neetcode/Design Double-ended Queue/DoublyLinkedList.h")
+        "neetcode/Design Double-ended Queue/DoublyLinkedList.h"
+        "neetcode leetcode/1700/Lunch.h")
