@@ -33,12 +33,19 @@ public:
             return -1;
         }
 
+        if (head->next == nullptr) {
+            int val = *head->val;
+            head= new DoublyLinkedList();
+
+            return val;
+        }
+
         while (currentNode->next != nullptr) {
             currentNode = currentNode->next;
         }
 
         const int poppedVal = *currentNode->val;
-        currentNode->prev->next = new DoublyLinkedList();
+        currentNode->prev->next = nullptr;
 
         return poppedVal;
     }

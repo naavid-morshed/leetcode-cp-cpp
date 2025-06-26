@@ -151,29 +151,18 @@ int main() {
     // }
 
     auto list = new Deque();
-    list->appendleft(0);
-    // list->appendleft(1);
-    // list->append(10);
-    // list->append(11);
-    // list->append(12);
-    // list->appendleft(50);
-    // list->appendleft(2);
-
-    cout << "Popped Val HEAD: " << list->pop() << endl;
-    //
-    // // cout << "Popped value TAIL: " << list->pop() << endl;
-    // cout << "Popped value: " << list->pop() << endl;
-    // // cout << "Popped value: " << list->pop() << endl;
-    // cout << "Popped Val HEAD: " << list->popleft() << endl;
-    // cout << "Popped value: " << list->pop() << endl;
-
-    // list->append(55);
-    // list->appendleft(50);
+    // cout << (list->isEmpty() ? "Empty" : "Not Empty") << endl;
+    list->appendleft(1);
+    list->appendleft(2);
+    list->pop();
+    list->pop();
 
     auto dd = list->head;
 
     while (dd != nullptr) {
-        cout << *dd->val << ", ";
+        if (dd->val != nullptr) {
+            cout << *dd->val << ", ";
+        }
         dd = dd->next;
     }
     cout << endl;
@@ -185,7 +174,9 @@ int main() {
     }
 
     while (tail != nullptr) {
-        cout << *tail->val << ", ";
+        if (tail->val != nullptr) {
+            cout << *tail->val << ", ";
+        }
         tail = tail->prev;
     }
 }
