@@ -28,12 +28,24 @@ public:
 
         int poppedVal = intStack->front();
         intStack = temp;
+        delete temp;
 
         return poppedVal;
     }
 
     int top() {
-        return intStack->empty() ? -1 : intStack->back();
+        auto temp = new queue<int>;
+
+        while (intStack->size() > 1) {
+            temp->push(intStack->front());
+            intStack->pop();
+        }
+        int topVal = intStack->front();
+        temp->push(intStack->front());
+        intStack = temp;
+        delete temp;
+
+        return topVal;
     }
 
     bool empty() {

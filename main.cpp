@@ -157,9 +157,11 @@ int main() {
     obj->push(1);
     obj->push(2);
     obj->push(3);
-    cout << obj->pop() << endl;
-    cout << obj->pop() << endl;
     cout << obj->top() << endl;
+
+    // cout << obj->pop() << endl;
+    // cout << obj->pop() << endl;
+    // cout << obj->top() << endl;
 
     // int param_2 = obj->pop();
     // cout << param_2 << endl;
