@@ -11,36 +11,31 @@ using namespace std;
 class Lunch {
 public:
     static int countStudents(vector<int> &students, vector<int> &sandwiches) {
-        // for (int i = 0; i < students.size(); i++) {
-        //     if (sandwiches.empty()) {
-        //         break;
-        //     }
-        //
-        //     if (sandwiches[i] == students[i]) {
-        //         sandwiches.erase(sandwiches.begin());
-        //         students.erase(students.begin());
-        //
-        //         i--;
-        //     } else {
-        //         int first = students.front();
-        //         students.erase(students.begin());
-        //         students.push_back(first);
-        //
-        //         i--;
-        //     }
-        // }
-        //
-        // return students.size();
+        for (int i = 0;; ) {
+            const int currentSandwich = sandwiches[i];
+            bool match = false;
 
-        while (!sandwiches.empty()) {
-            if (sandwiches.front() == students.front()) {
-                sandwiches.erase(sandwiches.begin());
+            for (const int s : students) {
+                if (s == currentSandwich) {
+                    match = true;
+                    break;
+                }
+            }
+
+            if (!match) {
+                break;
+            }
+
+            if (students[i] == sandwiches[i]) {
                 students.erase(students.begin());
-            } else {
+                sandwiches.erase(sandwiches.begin());
+            } else if (students[i] != sandwiches[i]) {
                 int first = students.front();
                 students.erase(students.begin());
                 students.push_back(first);
             }
+
+
         }
 
         return students.size();

@@ -151,8 +151,8 @@ int main() {
     //     urls.pop();
     // }
 
-    vector sandwiches = {1, 0, 0, 0, 1, 1};
-    vector students = {1, 1, 1, 0, 0, 1};
+    vector students = {1,1,0,0};
+    vector sandwiches = {0,1,0,1};
 
 
     cout << Lunch::countStudents(students, sandwiches) << endl;
