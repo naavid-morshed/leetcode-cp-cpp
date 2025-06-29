@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 
 #include "neetcode leetcode/26/Sol26.h"
 #include "neetcode leetcode/27/Sol27.h"
@@ -6,7 +7,7 @@
 #include "leetcode/2914/Sol2914.h"
 #include "neetcode leetcode/1472/BrowserHistory.h"
 #include "neetcode leetcode/155/Sol155.h"
-#include "neetcode leetcode/1700/Lunch.h"
+#include "neetcode leetcode/1700 (interview)/Lunch.h"
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
 #include "neetcode leetcode/707 Design Linked List/MyLinkedList.h"
@@ -151,9 +152,8 @@ int main() {
     //     urls.pop();
     // }
 
-    vector students = {1,1,0,0};
-    vector sandwiches = {0,1,0,1};
+    vector students = {1, 1, 1, 0, 0, 1};
+    vector sandwiches = {1, 0, 0, 0, 1, 1};
 
-
-    cout << Lunch::countStudents(students, sandwiches) << endl;
+    cout << Lunch::countStudentsAlt2(students, sandwiches) << endl;
 }
