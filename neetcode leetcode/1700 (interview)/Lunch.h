@@ -68,27 +68,27 @@ public:
         return studentsQ.size();
     }
 
-    static int countStudentsAlt2(vector<int>& students, vector<int>& sandwiches) {
-        int count[2] = {}; // an array of two indexes, each holding 0;
+    static int countStudentsAlt2(vector<int> &students, vector<int> &sandwiches) {
+        int count[] = {0, 0}; // an array of two indexes, each holding 0;
 
-        for (int s : students) {
+        for (const int s: students) {
             count[s]++;
         }
 
         for (int i = 0; i < sandwiches.size(); ++i) {
             int type = sandwiches[i];
 
+            // loop breaks when a sandwich is found that no students want,
+            // in that case no matter how many times students are rotated, that sandwich will not be taken
             if (count[type] == 0) {
-                // No student wants this type, break here
                 return sandwiches.size() - i;
             }
 
-            count[type]--; // A student took the sandwich
+            count[type]--;
         }
 
-        return 0; // Everyone got what they wanted
+        return 0;
     }
-
 };
 
 #endif //LUNCH_H
