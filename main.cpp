@@ -15,6 +15,7 @@
 #include "neetcode/Design Double-ended Queue/DoublyLinkedList.h"
 #include "neetcode/Design Singly Linked List/LinkedListAlt.h"
 #include "neetcode/Design Singly Linked List/ListNode.h"
+#include "neetcode/Implement Stack Using Queues/MyStack.h"
 #include "neetcode/merge two sorted linked list/MergeTwoLists.h"
 #include "neetcode/Reverse Linked List/LNode.h"
 #include "neetcode/Reverse Linked List/solution.h"
@@ -152,8 +153,23 @@ int main() {
     //     urls.pop();
     // }
 
-    vector students = {1, 1, 1, 0, 0, 1};
-    vector sandwiches = {1, 0, 0, 0, 1, 1};
+    auto obj = new MyStack();
+    obj->push(1);
+    obj->push(2);
+    obj->push(3);
+    cout << obj->pop() << endl;
+    cout << obj->pop() << endl;
+    cout << obj->top() << endl;
 
-    cout << Lunch::countStudentsAlt2(students, sandwiches) << endl;
+    // int param_2 = obj->pop();
+    // cout << param_2 << endl;
+    // int param_3 = obj->top();
+    // cout << param_3 << endl;
+    // bool param_4 = obj->empty();
+    // cout << param_4 << endl;
+
+    // while (!obj->empty()) {
+    //     cout << obj->top() << ", " << endl;
+    //     cout << "Popped Val: " << obj->pop() <<endl;
+    // }
 }
