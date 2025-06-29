@@ -11,7 +11,7 @@ using namespace std;
 class Lunch {
 public:
     static int countStudents(vector<int> &students, vector<int> &sandwiches) {
-        // O(n^2), alt has O(n)
+        // O(n^2), alt2 has O(n)
         for (int i = 0;;) {
             const int currentSandwich = sandwiches[i];
             bool match = false;
@@ -41,6 +41,7 @@ public:
     }
 
     static int countStudentsAlt(vector<int> &students, vector<int> &sandwiches) {
+        // O(n^2), alt2 has O(n)
         int timesNotFoundMatch = 0;
 
         queue<int> studentsQ;
@@ -68,6 +69,7 @@ public:
         return studentsQ.size();
     }
 
+    // best approach
     static int countStudentsAlt2(vector<int> &students, vector<int> &sandwiches) {
         int count[] = {0, 0}; // an array of two indexes, each holding 0;
 
@@ -79,7 +81,7 @@ public:
             int type = sandwiches[i];
 
             // loop breaks when a sandwich is found that no students want,
-            // in that case no matter how many times students are rotated, that sandwich will not be taken
+            // in that case no matter how many times students are rotated, that sandwich will not be taken, rest of students will be unfed
             if (count[type] == 0) {
                 return sandwiches.size() - i;
             }
