@@ -28,7 +28,6 @@ public:
 
         int poppedVal = intStack->front();
         intStack = temp;
-        delete temp;
 
         return poppedVal;
     }
@@ -43,7 +42,6 @@ public:
         int topVal = intStack->front();
         temp->push(intStack->front());
         intStack = temp;
-        delete temp;
 
         return topVal;
     }
