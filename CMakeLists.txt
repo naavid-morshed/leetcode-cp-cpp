@@ -26,4 +26,5 @@ add_executable(leetcode_cp_cpp main.cpp
         "neetcode/Design Double-ended Queue/Deque.h"
         "neetcode/Design Double-ended Queue/DoublyLinkedList.h"
         "neetcode leetcode/1700 (interview)/Lunch.h"
-        "neetcode/Implement Stack Using Queues/MyStack.h")
+        "neetcode/Implement Stack Using Queues/MyStack.h"
+        "neetcode leetcode/70. Climbing Stairs/ClimbingStairs.h")

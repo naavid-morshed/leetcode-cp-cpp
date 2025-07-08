@@ -10,6 +10,7 @@
 #include "neetcode leetcode/1700 (interview)/Lunch.h"
 #include "neetcode/designing dynamic array/DynamicArray.h"
 #include "neetcode leetcode/20/Sol20Alt.h"
+#include "neetcode leetcode/70. Climbing Stairs/ClimbingStairs.h"
 #include "neetcode leetcode/707 Design Linked List/MyLinkedList.h"
 #include "neetcode/Design Double-ended Queue/Deque.h"
 #include "neetcode/Design Double-ended Queue/DoublyLinkedList.h"
@@ -153,25 +154,5 @@ int main() {
     //     urls.pop();
     // }
 
-    auto obj = new MyStack();
-    obj->push(1);
-    obj->push(2);
-    obj->push(3);
-    cout << obj->top() << endl;
-
-    // cout << obj->pop() << endl;
-    // cout << obj->pop() << endl;
-    // cout << obj->top() << endl;
-
-    // int param_2 = obj->pop();
-    // cout << param_2 << endl;
-    // int param_3 = obj->top();
-    // cout << param_3 << endl;
-    // bool param_4 = obj->empty();
-    // cout << param_4 << endl;
-
-    // while (!obj->empty()) {
-    //     cout << obj->top() << ", " << endl;
-    //     cout << "Popped Val: " << obj->pop() <<endl;
-    // }
+    cout << ClimbingStairs::climbStairs2(11) << endl;
 }
