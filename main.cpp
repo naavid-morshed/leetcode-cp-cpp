@@ -154,5 +154,5 @@ int main() {
     //     urls.pop();
     // }
 
-    cout << ClimbingStairs::climbStairs2(11) << endl;
+    cout << ClimbingStairs::climbStairs3(5) << endl;
 }
