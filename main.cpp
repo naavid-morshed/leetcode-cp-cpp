@@ -17,6 +17,7 @@
 #include "neetcode/Design Singly Linked List/LinkedListAlt.h"
 #include "neetcode/Design Singly Linked List/ListNode.h"
 #include "neetcode/Implement Stack Using Queues/MyStack.h"
+#include "neetcode/Insertion Sort/InserstionSort.h"
 #include "neetcode/merge two sorted linked list/MergeTwoLists.h"
 #include "neetcode/Reverse Linked List/LNode.h"
 #include "neetcode/Reverse Linked List/solution.h"
@@ -154,5 +155,26 @@ int main() {
     //     urls.pop();
     // }
 
-    cout << ClimbingStairs::climbStairs3(5) << endl;
+    // cout << ClimbingStairs::climbStairs3(5) << endl;
+
+    vector pairs = {
+        Pair(3, "cat"),
+        Pair(3, "bird"),
+        Pair(2, "dog")
+    };
+
+    vector<vector<Pair> > resultSet = InserstionSort::insertionSort(pairs);
+
+    for (const auto &pairs: resultSet) {
+        for (const auto &item: pairs) {
+            cout << "(" << item.key << ": " << item.value << ")" << endl;
+        }
+        cout << endl;
+    }
+
+    // auto sortedPair = InserstionSort::insertionSortx(pairs);
+    //
+    // for (const auto &item: pairs) {
+    //     cout << "(" << item.key << ": " << item.value << ")" << endl;
+    // }
 }
