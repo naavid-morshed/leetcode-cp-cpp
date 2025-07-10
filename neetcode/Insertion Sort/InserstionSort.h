@@ -23,9 +23,13 @@ public:
 class InserstionSort {
 public:
     static vector<vector<Pair> > insertionSort(vector<Pair> &pairs) {
+        if (pairs.empty()) {
+            return {};
+        }
+
         vector<vector<Pair> > state;
         state.push_back(pairs);
-        
+
         for (int i = 1; i < pairs.size(); i++) {
             for (int j = i; j > 0; j--) {
                 if (pairs[j - 1].key > pairs[j].key) {
@@ -34,25 +38,10 @@ public:
                     pairs[j] = temp;
                 }
             }
-                state.push_back(pairs);
-
+            state.push_back(pairs);
         }
 
         return state;
-    }
-
-    static vector<Pair> insertionSortx(vector<Pair> &pairs) {
-        for (int i = 1; i < pairs.size(); i++) {
-            for (int j = i; j > 0; j--) {
-                if (pairs[j].key < pairs[j - 1].key) {
-                    pairs[j].key = pairs[j].key + pairs[j - 1].key;
-                    pairs[j - 1].key = pairs[j].key - pairs[j - 1].key;
-                    pairs[j].key = pairs[j].key - pairs[j - 1].key;
-                }
-            }
-        }
-
-        return pairs;
     }
 };
 

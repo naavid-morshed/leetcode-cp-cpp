@@ -157,24 +157,21 @@ int main() {
 
     // cout << ClimbingStairs::climbStairs3(5) << endl;
 
-    vector pairs = {
-        Pair(3, "cat"),
-        Pair(3, "bird"),
-        Pair(2, "dog")
-    };
-
-    vector<vector<Pair> > resultSet = InserstionSort::insertionSort(pairs);
-
-    for (const auto &pairs: resultSet) {
-        for (const auto &item: pairs) {
-            cout << "(" << item.key << ": " << item.value << ")" << endl;
-        }
-        cout << endl;
-    }
-
-    // auto sortedPair = InserstionSort::insertionSortx(pairs);
+    // // InsertionSort problem, returns list of list of pairs after each insertion
+    // vector pairs = {
+    //     Pair(3, "cat"),
+    //     Pair(3, "bird"),
+    //     Pair(2, "dog")
+    // };
     //
-    // for (const auto &item: pairs) {
-    //     cout << "(" << item.key << ": " << item.value << ")" << endl;
+    // vector<vector<Pair> > resultSet = InserstionSort::insertionSort(pairs);
+    //
+    // for (const auto &pairs: resultSet) {
+    //     for (const auto &item: pairs) {
+    //         cout << "(" << item.key << ": " << item.value << ")" << endl;
+    //     }
+    //     cout << endl;
     // }
+
+
 }
